@@ -98,6 +98,9 @@ DEVICE_FRAMEWORK_COMPATIBILITY_MATRIX_FILE := \
     $(COMMON_PATH)/device_framework_matrix.xml \
     vendor/lineage/config/device_framework_matrix.xml
 
+# HWUI
+HWUI_COMPILE_FOR_PERF := true
+
 # VINTF (Vendor Interface)
 DEVICE_MANIFEST_FILE += $(COMMON_PATH)/configs/vintf/manifest.xml
 DEVICE_MATRIX_FILE := $(COMMON_PATH)/configs/vintf/compatibility_matrix.xml
