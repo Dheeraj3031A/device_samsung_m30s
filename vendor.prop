@@ -58,6 +58,7 @@ ro.surface_flinger.enable_frame_rate_override=false
 ro.hwui.render_ahead=20
 ro.surface_flinger.enable_layer_caching=false
 ro.vendor.perf.scroll_opt=true
+debug.sf.enable_egl_image_tracker=0
 
 # Enable wide gamut and color management
 ro.surface_flinger.has_wide_color_display=true
