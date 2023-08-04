@@ -23,6 +23,9 @@ OVERRIDE_TARGET_FLATTEN_APEX := true
 DEXPREOPT_GENERATE_APEX_IMAGE := true
 ro.apex.updatable=false
 
+# Setup dalvik vm configs
+$(call inherit-product, frameworks/native/build/phone-xhdpi-4096-dalvik-heap.mk)
+
 # Audio
 PRODUCT_PACKAGES += \
     android.hardware.audio.effect@7.0-impl:32 \
