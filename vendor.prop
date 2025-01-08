@@ -66,6 +66,9 @@ ro.product_ship=true
 # If not set or set to 0, OMX will only use BT.601 colorspace.
 ro.vendor.cscsupported=1
 
+## Perf
+vendor.perf.framepacing.enable=1
+
 ## SoC
 ro.soc.manufacturer=Samsung
 ro.soc.model=Exynos 9611
