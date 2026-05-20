@@ -1,0 +1,26 @@
+<?xml version='1.0' encoding='utf-8' standalone='yes' ?>
+<carrier_config_list>
+    <carrier_config>
+        <boolean name="carrier_volte_available_bool" value="true" />
+        <boolean name="carrier_vt_available_bool" value="true" />
+        <boolean name="carrier_wfc_ims_available_bool" value="true" />
+        <boolean name="carrier_wfc_supports_wifi_only_bool" value="true" />
+        <boolean name="carrier_default_wfc_ims_enabled_bool" value="true" />
+        <boolean name="carrier_default_wfc_ims_roaming_enabled_bool" value="true" />
+        <int name="carrier_default_wfc_ims_mode_int" value="2" />
+        <int name="carrier_default_wfc_ims_roaming_mode_int" value="2" />
+        <boolean name="editable_wfc_mode_bool" value="true" />
+        <boolean name="editable_wfc_roaming_mode_bool" value="true" />
+        <int-array name="iwlan.supported_integrity_algorithms_int_array" num="4">
+            <item value="2" />
+            <item value="12" />
+            <item value="13" />
+            <item value="14" />
+        </int-array>
+        <string-array name="iwlan_handover_policy_string_array" num="3">
+            <item value="source=IWLAN, target=GERAN|UTRAN, type=disallowed" />
+            <item value="source=GERAN|UTRAN, target=IWLAN, type=disallowed" />
+            <item value="source=EUTRAN|NGRAN|IWLAN, target=EUTRAN|NGRAN|IWLAN, type=allowed" />
+        </string-array>
+    </carrier_config>
+</carrier_config_list>

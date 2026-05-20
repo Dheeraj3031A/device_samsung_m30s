@@ -238,6 +238,32 @@ PRODUCT_PACKAGES += \
     android.hardware.radio.deprecated@1.0.vendor \
     secril_config_svc
 
+PRODUCT_PACKAGES += \
+    PhhIms \
+    Iwlan \
+    QualifiedNetworksService \
+    CarrierConfigResCommon \
+    TelephonyResCommon \
+    FrameworkResOverlayCommon
+
+# Keep IMS availability deterministic during bring-up. The real platform and
+# carrier gates are also exposed through framework and CarrierConfig overlays.
+PRODUCT_PROPERTY_OVERRIDES += \
+    persist.dbg.volte_avail_ovr=1 \
+    persist.dbg.wfc_avail_ovr=1 \
+    persist.dbg.allow_ims_off=1
+
+# IMS framework feature. Without this, PhoneFactory skips ImsResolver
+# before PhhIms can be bound.
+PRODUCT_COPY_FILES += \
+    frameworks/native/data/etc/android.hardware.telephony.ims.xml:$(TARGET_COPY_OUT_VENDOR)/etc/permissions/android.hardware.telephony.ims.xml
+
+PRODUCT_COPY_FILES += \
+    $(COMMON_PATH)/configs/ims/privapp-permissions-me.phh.ims.xml:$(TARGET_COPY_OUT_SYSTEM)/etc/permissions/privapp-permissions-me.phh.ims.xml
+
+PRODUCT_COPY_FILES += \
+    $(COMMON_PATH)/configs/ril/sehradiomanager.conf:$(TARGET_COPY_OUT_VENDOR)/etc/sehradiomanager.conf
+
 # Sensors
 PRODUCT_PACKAGES += \
     android.hardware.sensors-service.samsung-multihal
