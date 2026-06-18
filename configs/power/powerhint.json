@@ -36,15 +36,6 @@
             "ResetOnInit": true
         },
         {
-            "Name": "GPUPowerPolicy",
-            "Path": "/sys/devices/platform/11500000.mali/power_policy",
-            "Values": [
-                "always_on",
-                "coarse_demand"
-            ],
-            "ResetOnInit": true
-        },
-        {
             "Name": "TASchedtuneBoost",
             "Path": "/dev/stune/top-app/schedtune.boost",
             "Values": [
@@ -158,22 +149,10 @@
             "Value": "1"
         },
         {
-            "PowerHint": "LAUNCH",
-            "Node": "GPUPowerPolicy",
-            "Duration": 5000,
-            "Value": "always_on"
-        },
-        {
             "PowerHint": "CAMERA_LAUNCH",
             "Node": "CPUMaxFreq",
             "Duration": 1000,
             "Value": "2314000"
-        },
-        {
-            "PowerHint": "CAMERA_LAUNCH",
-            "Node": "GPUPowerPolicy",
-            "Duration": 1000,
-            "Value": "always_on"
         },
         {
             "PowerHint": "CAMERA_LAUNCH",
@@ -246,12 +225,6 @@
             "Node": "GPUMinFreq",
             "Duration": 0,
             "Value": "764000"
-        },
-        {
-            "PowerHint": "EXPENSIVE_RENDERING",
-            "Node": "GPUPowerPolicy",
-            "Duration": 0,
-            "Value": "always_on"
         }
     ]
 }
